@@ -102,6 +102,27 @@ Die Anwendung wird als kompilierte App veröffentlicht. Der Quellcode bleibt vor
 
 Der erste öffentliche Build ist noch nicht von Apple notarisiert. Falls macOS den ersten Start blockiert: Rechtsklick auf die Anwendung, **Öffnen** auswählen und den Dialog bestätigen.
 
+### macOS-Version installieren und öffnen
+
+1. Lade `GeniusFocusView-macOS-1.0.0.zip` unter [GitHub Releases](../../releases/latest) herunter.
+2. Öffne die ZIP-Datei per Doppelklick.
+3. Verschiebe `GeniusFokusView.app` bei Bedarf in den Ordner **Programme**.
+4. Beim ersten Start: Klicke die App mit gedrückter Control-Taste oder per Rechtsklick an, wähle **Öffnen** und bestätige nochmals mit **Öffnen**.
+
+Da dieser unabhängige Test-Build noch nicht von Apple notarisiert ist, melden manche macOS-Versionen trotzdem, dass der Entwickler nicht überprüft werden kann oder die App nicht geöffnet werden darf. Dann hilft folgende einmalige Freigabe:
+
+1. Öffne **Terminal** unter Programme → Dienstprogramme.
+2. Gib den folgenden Befehl einschließlich des Leerzeichens am Ende ein, drücke aber noch nicht Enter:
+
+   ```text
+   xattr -dr com.apple.quarantine 
+   ```
+
+3. Ziehe `GeniusFokusView.app` aus dem Finder in das Terminalfenster. Der vollständige Pfad wird automatisch ergänzt.
+4. Drücke Enter, schließe Terminal und starte die App anschließend normal.
+
+Nutze diese Freigabe ausschließlich für den GFV-Build aus diesem offiziellen Repository. Sie entfernt nur die Download-Quarantäne dieser einen App, installiert keine zusätzliche Software und verändert nicht das restliche System.
+
 ## Datenschutz
 
 - Die Analyse läuft lokal.

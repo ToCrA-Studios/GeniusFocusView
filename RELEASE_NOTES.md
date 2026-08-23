@@ -18,6 +18,8 @@ This is the first public community build of GeniusFocusView: an offline tool for
 - available memory and processing time depend strongly on project size;
 - the build is not yet notarized by Apple. If macOS blocks the first launch, right-click the app, choose **Open**, and confirm.
 
+If macOS still refuses to open the app, open Terminal, type `xattr -dr com.apple.quarantine ` including the final space, drag `GeniusFokusView.app` into the Terminal window, and press Return. Then open the app normally. Only do this for the build downloaded from this official repository.
+
 ## Feedback wanted
 
 Please report missing detections, incorrect system assignments, confusing maps, performance problems, and export issues through GitHub Issues. Include hardware, macOS version, approximate project size, languages/frameworks, observed duration, and the expected result. Do not attach confidential source code or credentials.
@@ -31,6 +33,8 @@ Dies ist der erste öffentliche Community-Build von GeniusFocusView: einem Offli
 Enthalten sind lokale Projektanalyse, erkannte Dateien, Objekte und Relationen, System- und Detailkarten, Visual Canvas Studio, Markdown-Export sowie eine deutsche und englische Oberfläche. Der universelle Build unterstützt Apple Silicon und Intel ab macOS 10.15.
 
 Der Build ist noch nicht von Apple notarisiert. Falls macOS den ersten Start blockiert: Rechtsklick auf die App, **Öffnen** auswählen und bestätigen.
+
+Falls macOS die App weiterhin ablehnt: Terminal öffnen, `xattr -dr com.apple.quarantine ` einschließlich des Leerzeichens am Ende eingeben, `GeniusFokusView.app` in das Terminalfenster ziehen und Enter drücken. Anschließend die App normal öffnen. Diese Freigabe nur für den Build aus diesem offiziellen Repository verwenden.
 
 Fehler, fehlende Erkennungen, falsche Systemzuordnungen, unverständliche Karten und Laufzeitprobleme können über GitHub Issues gemeldet werden. Bitte keine vertraulichen Quelltexte oder Zugangsdaten anhängen.
 
