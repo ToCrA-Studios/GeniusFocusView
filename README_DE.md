@@ -90,9 +90,18 @@ Die Erfahrungen und Rückmeldungen aus diesem Release bestimmen, an welchen Prob
 
 ## Download
 
-Die aktuelle macOS-Version findest du unter [GitHub Releases](../../releases/latest).
+Die aktuellen Versionen für macOS und Windows findest du unter [GitHub Releases](../../releases/latest).
 
 Die Anwendung wird als kompilierte App veröffentlicht. Der Quellcode bleibt vorerst privat.
+
+### Verfügbare Builds
+
+| Plattform | Download | Unterstützte Hardware |
+| --- | --- | --- |
+| macOS | `GeniusFocusView-macOS-1.0.0.zip` | Apple-Silicon- und Intel-Macs |
+| Windows | `GeniusFocusView-Windows-ARM64-1.0.0.zip` | Ausschließlich Windows 11 auf ARM64-Geräten |
+
+Der aktuelle Windows-Build ist **ausschließlich für ARM64**. Er läuft auf Windows-on-ARM-Geräten, beispielsweise kompatiblen Snapdragon-PCs und ARM64-VMs. Auf gewöhnlichen Windows-PCs mit Intel- oder AMD-Prozessor funktioniert er **nicht**. Ein separater Windows-x64-Build ist derzeit noch nicht verfügbar.
 
 ### Voraussetzungen
 
@@ -131,6 +140,16 @@ Nur falls macOS dort weiterhin keine Freigabe anbietet, nutze folgende Terminal-
 
 Nutze die Terminal-Alternative ausschließlich für den GFV-Build aus diesem offiziellen Repository. Sie entfernt nur die Download-Quarantäne dieser einen App, installiert keine zusätzliche Software und verändert nicht das restliche System.
 
+### Windows-ARM64-Version installieren und öffnen
+
+1. Prüfe zuerst, ob auf dem Gerät **Windows 11 auf ARM64** läuft. Öffne dazu **Einstellungen** → **System** → **Info** und kontrolliere den **Systemtyp**.
+2. Lade `GeniusFocusView-Windows-ARM64-1.0.0.zip` unter [GitHub Releases](../../releases/latest) herunter.
+3. Klicke die ZIP-Datei mit der rechten Maustaste an und wähle **Alle extrahieren**.
+4. Lass alle entpackten Dateien zusammen in diesem Ordner. Verschiebe `GeniusFocusView.exe` nicht einzeln, da die danebenliegenden DLL- und `data`-Dateien benötigt werden.
+5. Starte `GeniusFocusView.exe`.
+
+Windows kann eine Sicherheitswarnung anzeigen, weil dieser unabhängige Test-Build derzeit nicht digital signiert ist. Starte nur den Build aus diesem offiziellen Repository. Zeigt der PC einen Intel- oder AMD-Prozessor an, warte bitte auf einen zukünftigen Windows-x64-Build; der ARM64-Download ist mit diesem Gerät nicht kompatibel.
+
 ## Datenschutz
 
 - Die Analyse läuft lokal.
@@ -145,8 +164,9 @@ Bitte nutze [GitHub Issues](../../issues) für Fehler, fehlende Erkennungen, Lei
 
 Hilfreich sind folgende Angaben:
 
-- Mac-Modell und Baujahr;
-- macOS-Version;
+- Computermodell und Baujahr;
+- Betriebssystemversion;
+- CPU-Architektur (Apple Silicon, Intel/AMD x64 oder Windows ARM64);
 - Arbeitsspeicher;
 - ungefähre Anzahl der Projektdateien;
 - wichtigste Sprachen und Frameworks;

@@ -90,9 +90,18 @@ The experiences and feedback from this release will determine which problems I w
 
 ## Download
 
-Download the current macOS build from [GitHub Releases](../../releases/latest).
+Download the current macOS and Windows builds from [GitHub Releases](../../releases/latest).
 
 The application is distributed as a compiled binary. The source code is currently private.
+
+### Available builds
+
+| Platform | Download | Supported hardware |
+| --- | --- | --- |
+| macOS | `GeniusFocusView-macOS-1.0.0.zip` | Apple Silicon and Intel Macs |
+| Windows | `GeniusFocusView-Windows-ARM64-1.0.0.zip` | Windows 11 on ARM64 devices only |
+
+The current Windows build is **ARM64 only**. It runs on Windows-on-ARM devices, including compatible Snapdragon-based PCs and ARM64 virtual machines. It does **not** run on ordinary Intel or AMD Windows computers. A separate Windows x64 build is not available yet.
 
 ### macOS compatibility
 
@@ -131,6 +140,16 @@ Only if macOS still offers no approval option, use the following Terminal fallba
 
 Only use the Terminal fallback for the GFV build downloaded from this official repository. It removes Apple's download quarantine from that one app; it does not install additional software or change the rest of the system.
 
+### Installing and opening the Windows ARM64 build
+
+1. Confirm that the device runs **Windows 11 on ARM64**. In Windows, open **Settings** → **System** → **About** and check **System type**.
+2. Download `GeniusFocusView-Windows-ARM64-1.0.0.zip` from [GitHub Releases](../../releases/latest).
+3. Right-click the ZIP file and choose **Extract All**.
+4. Keep all extracted files together. Do not move `GeniusFocusView.exe` out of its folder because the adjacent DLL and `data` files are required.
+5. Start `GeniusFocusView.exe`.
+
+Windows may display a security warning because this independent test build is not currently code-signed. Only run the build downloaded from this official repository. If the computer reports an Intel or AMD processor, wait for a future Windows x64 build; the ARM64 download is not compatible with that device.
+
 ## Privacy
 
 - Analysis runs locally.
@@ -145,8 +164,9 @@ Please use [GitHub Issues](../../issues) for bugs, missing detections, performan
 
 Helpful reports include:
 
-- Mac model and year;
-- macOS version;
+- computer model and year;
+- operating-system version;
+- CPU architecture (Apple Silicon, Intel/AMD x64, or Windows ARM64);
 - installed memory;
 - approximate number of project files;
 - primary languages and frameworks;
