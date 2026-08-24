@@ -109,7 +109,15 @@ Der erste öffentliche Build ist noch nicht von Apple notarisiert. Falls macOS d
 3. Verschiebe `GeniusFokusView.app` bei Bedarf in den Ordner **Programme**.
 4. Beim ersten Start: Klicke die App mit gedrückter Control-Taste oder per Rechtsklick an, wähle **Öffnen** und bestätige nochmals mit **Öffnen**.
 
-Da dieser unabhängige Test-Build noch nicht von Apple notarisiert ist, melden manche macOS-Versionen trotzdem, dass der Entwickler nicht überprüft werden kann oder die App nicht geöffnet werden darf. Dann hilft folgende einmalige Freigabe:
+Da dieser unabhängige Test-Build noch nicht von Apple notarisiert ist, melden manche macOS-Versionen trotzdem, dass der Entwickler nicht überprüft werden kann oder die App nicht geöffnet werden darf. Nutze dann zuerst die normale Freigabe von Apple:
+
+1. Öffne **Systemeinstellungen** → **Datenschutz & Sicherheit**.
+2. Scrolle nach unten zum Bereich **Sicherheit**. Dort sollte stehen, dass `GeniusFokusView` blockiert wurde.
+3. Klicke auf **Dennoch öffnen**, bestätige bei Bedarf dein Passwort und anschließend nochmals **Öffnen**.
+
+Diese Freigabe ist normalerweise nur einmal erforderlich. Falls **Dennoch öffnen** nicht angezeigt wird, versuche die App nochmals zu starten und öffne direkt danach erneut Datenschutz & Sicherheit.
+
+Nur falls macOS dort weiterhin keine Freigabe anbietet, nutze folgende Terminal-Alternative:
 
 1. Öffne **Terminal** unter Programme → Dienstprogramme.
 2. Gib den folgenden Befehl einschließlich des Leerzeichens am Ende ein, drücke aber noch nicht Enter:
@@ -121,7 +129,7 @@ Da dieser unabhängige Test-Build noch nicht von Apple notarisiert ist, melden m
 3. Ziehe `GeniusFokusView.app` aus dem Finder in das Terminalfenster. Der vollständige Pfad wird automatisch ergänzt.
 4. Drücke Enter, schließe Terminal und starte die App anschließend normal.
 
-Nutze diese Freigabe ausschließlich für den GFV-Build aus diesem offiziellen Repository. Sie entfernt nur die Download-Quarantäne dieser einen App, installiert keine zusätzliche Software und verändert nicht das restliche System.
+Nutze die Terminal-Alternative ausschließlich für den GFV-Build aus diesem offiziellen Repository. Sie entfernt nur die Download-Quarantäne dieser einen App, installiert keine zusätzliche Software und verändert nicht das restliche System.
 
 ## Datenschutz
 

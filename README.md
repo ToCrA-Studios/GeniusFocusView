@@ -109,7 +109,15 @@ The first public build is not notarized by Apple. If macOS blocks the first laun
 3. Move `GeniusFokusView.app` to **Applications** if you want to keep it there.
 4. For the first launch, Control-click or right-click the app, choose **Open**, and then choose **Open** again.
 
-Because this independent test build is not yet notarized by Apple, some macOS versions may still report that Apple cannot verify the developer or that the app cannot be opened. In that case:
+Because this independent test build is not yet notarized by Apple, some macOS versions may still report that Apple cannot verify the developer or that the app cannot be opened. In that case, use Apple's normal security approval first:
+
+1. Open **System Settings** → **Privacy & Security**.
+2. Scroll down to **Security**. macOS should state that `GeniusFokusView` was blocked.
+3. Click **Open Anyway**, authenticate if requested, and confirm **Open**.
+
+This approval is normally required only once. If **Open Anyway** is not shown, try opening the app once more and return immediately to Privacy & Security.
+
+Only if macOS still offers no approval option, use the following Terminal fallback:
 
 1. Open **Terminal** from Applications → Utilities.
 2. Type the following command, including the final space, but do not press Return yet:
@@ -121,7 +129,7 @@ Because this independent test build is not yet notarized by Apple, some macOS ve
 3. Drag `GeniusFokusView.app` from Finder into the Terminal window. Its full path will be added automatically.
 4. Press Return, close Terminal, and open the app normally.
 
-Only use this workaround for the GFV build downloaded from this official repository. It removes Apple's download quarantine from that one app; it does not install additional software or change the rest of the system.
+Only use the Terminal fallback for the GFV build downloaded from this official repository. It removes Apple's download quarantine from that one app; it does not install additional software or change the rest of the system.
 
 ## Privacy
 
