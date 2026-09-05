@@ -80,7 +80,7 @@ Testing only my own projects cannot answer the questions that matter:
 - Does the Markdown export improve your work with an AI?
 - Is this a tool I should continue developing?
 
-Honest feedback will help decide what GFV becomes next. A report saying “this part does not work” is useful when it explains what was expected and what happened instead.
+Honest feedback will help decide what GFV becomes next. A report saying "this part does not work" is useful when it explains what was expected and what happened instead.
 
 ## An independent first release
 
@@ -115,13 +115,13 @@ The first public build is not notarized by Apple. If macOS blocks the first laun
 
 1. Download `GeniusFocusView-macOS-1.0.0.zip` from [GitHub Releases](../../releases/latest).
 2. Double-click the ZIP file to unpack it.
-3. Move `GeniusFokusView.app` to **Applications** if you want to keep it there.
+3. Move `GeniusFocusView.app` to **Applications** if you want to keep it there.
 4. For the first launch, Control-click or right-click the app, choose **Open**, and then choose **Open** again.
 
 Because this independent test build is not yet notarized by Apple, some macOS versions may still report that Apple cannot verify the developer or that the app cannot be opened. In that case, use Apple's normal security approval first:
 
 1. Open **System Settings** → **Privacy & Security**.
-2. Scroll down to **Security**. macOS should state that `GeniusFokusView` was blocked.
+2. Scroll down to **Security**. macOS should state that `GeniusFocusView` was blocked.
 3. Click **Open Anyway**, authenticate if requested, and confirm **Open**.
 
 This approval is normally required only once. If **Open Anyway** is not shown, try opening the app once more and return immediately to Privacy & Security.
@@ -131,14 +131,12 @@ Only if macOS still offers no approval option, use the following Terminal fallba
 1. Open **Terminal** from Applications → Utilities.
 2. Type the following command, including the final space, but do not press Return yet:
 
-   ```text
-   xattr -dr com.apple.quarantine 
+   ```
+   xattr -cr 
    ```
 
-3. Drag `GeniusFokusView.app` from Finder into the Terminal window. Its full path will be added automatically.
+3. Drag `GeniusFocusView.app` from Finder into the Terminal window. Its full path will be added automatically.
 4. Press Return, close Terminal, and open the app normally.
-
-Only use the Terminal fallback for the GFV build downloaded from this official repository. It removes Apple's download quarantine from that one app; it does not install additional software or change the rest of the system.
 
 ### Installing and opening the Windows ARM64 build
 
