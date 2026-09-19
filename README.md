@@ -44,6 +44,13 @@ It is not intended to replace source code or human judgment. Its purpose is to s
 | --- | --- |
 | ![GFV Visual Canvas Studio](screenshots/canvas-studio.png) | ![GFV Markdown export](screenshots/markdown-export.png) |
 
+## See it in action
+
+- [GeniusFocusView — how it works in 60 seconds](https://www.youtube.com/shorts/snoSetOjSno) — short walkthrough of the analysis and the map;
+- [Projekt X — a first look](https://www.youtube.com/watch?v=4JkTUCF0Rv4) (German) — where the idea came from and what the Canvas looks like.
+
+More on the [ToCrA Studios channel](https://www.youtube.com/@ToCrAStudios).
+
 ## Why it works offline
 
 Software projects may contain private ideas, unfinished products, customer information, credentials, or intellectual property. I therefore wanted the analysis itself to remain on the user's computer.
@@ -98,10 +105,13 @@ The application is distributed as a compiled binary. The source code is currentl
 
 | Platform | Download | Supported hardware |
 | --- | --- | --- |
-| macOS | `GeniusFocusView-macOS-1.0.0.zip` | Apple Silicon and Intel Macs |
-| Windows | `GeniusFocusView-Windows-ARM64-1.0.0.zip` | Windows 11 on ARM64 devices only |
+| macOS | `GeniusFocusView-macOS-1.0.1.zip` | Apple Silicon and Intel Macs |
+| Windows | `GeniusFocusView-Windows-x64-1.0.1.zip` | Windows 10/11 on Intel or AMD processors |
+| Windows on ARM | `GeniusFocusView-Windows-ARM64-1.0.1.zip` | Windows 11 on ARM64 devices (Snapdragon, Surface Pro X) |
 
-The current Windows build is **ARM64 only**. It runs on Windows-on-ARM devices, including compatible Snapdragon-based PCs and ARM64 virtual machines. It does **not** run on ordinary Intel or AMD Windows computers. A separate Windows x64 build is not available yet.
+Almost every Windows PC needs the **x64** file. ARM64 is only for the small number of Windows devices with a Snapdragon or other ARM processor. If you are unsure, press `Windows + Pause` or open **Settings** → **System** → **About** and look at **System type**.
+
+Downloading the wrong Windows file produces the message *"This app can't run on your PC"*. That is not a virus warning and not a broken download — it only means the file was built for a different processor. Download the other one.
 
 ### macOS compatibility
 
@@ -113,7 +123,7 @@ The first public build is not notarized by Apple. If macOS blocks the first laun
 
 ### Installing and opening the macOS build
 
-1. Download `GeniusFocusView-macOS-1.0.0.zip` from [GitHub Releases](../../releases/latest).
+1. Download `GeniusFocusView-macOS-1.0.1.zip` from [GitHub Releases](../../releases/latest).
 2. Double-click the ZIP file to unpack it.
 3. Move `GeniusFocusView.app` to **Applications** if you want to keep it there.
 4. For the first launch, Control-click or right-click the app, choose **Open**, and then choose **Open** again.
@@ -138,15 +148,15 @@ Only if macOS still offers no approval option, use the following Terminal fallba
 3. Drag `GeniusFocusView.app` from Finder into the Terminal window. Its full path will be added automatically.
 4. Press Return, close Terminal, and open the app normally.
 
-### Installing and opening the Windows ARM64 build
+### Installing and opening the Windows build
 
-1. Confirm that the device runs **Windows 11 on ARM64**. In Windows, open **Settings** → **System** → **About** and check **System type**.
-2. Download `GeniusFocusView-Windows-ARM64-1.0.0.zip` from [GitHub Releases](../../releases/latest).
+1. Check which processor the device has: press `Windows + Pause`, or open **Settings** → **System** → **About** and read **System type**.
+2. Download `GeniusFocusView-Windows-x64-1.0.1.zip` for an Intel or AMD processor, or `GeniusFocusView-Windows-ARM64-1.0.1.zip` for an ARM-based device, from [GitHub Releases](../../releases/latest).
 3. Right-click the ZIP file and choose **Extract All**.
 4. Keep all extracted files together. Do not move `GeniusFocusView.exe` out of its folder because the adjacent DLL and `data` files are required.
 5. Start `GeniusFocusView.exe`.
 
-Windows may display a security warning because this independent test build is not currently code-signed. Only run the build downloaded from this official repository. If the computer reports an Intel or AMD processor, wait for a future Windows x64 build; the ARM64 download is not compatible with that device.
+Windows may display a security warning because this independent test build is not currently code-signed. Choose **More info** → **Run anyway**, and only run builds downloaded from this official repository. If Windows reports a missing `VCRUNTIME140.dll`, install the Microsoft Visual C++ Redistributable 2015-2022 (x64).
 
 ## Privacy
 

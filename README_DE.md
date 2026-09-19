@@ -44,6 +44,13 @@ GFV soll weder den Quellcode noch das menschliche Urteilsvermögen ersetzen. Es 
 | --- | --- |
 | ![GFV Visual Canvas Studio](screenshots/canvas-studio.png) | ![GFV-Markdown-Export](screenshots/markdown-export.png) |
 
+## GFV in Bewegung
+
+- [GeniusFocusView – wie es funktioniert, in 60 Sekunden](https://www.youtube.com/shorts/snoSetOjSno) – kurzer Durchlauf durch Analyse und Karte;
+- [Projekt X – Ein erster Einblick](https://www.youtube.com/watch?v=4JkTUCF0Rv4) – woher die Idee kam und wie der Canvas aussieht.
+
+Mehr auf dem [Kanal von ToCrA Studios](https://www.youtube.com/@ToCrAStudios).
+
 ## Warum die Analyse offline läuft
 
 Quellcode kann private Ideen, unfertige Produkte, Kundendaten, Zugangsdaten oder geistiges Eigentum enthalten. Deshalb wollte ich, dass die eigentliche Analyse auf dem Computer des Nutzers bleibt.
@@ -98,10 +105,13 @@ Die Anwendung wird als kompilierte App veröffentlicht. Der Quellcode bleibt vor
 
 | Plattform | Download | Unterstützte Hardware |
 | --- | --- | --- |
-| macOS | `GeniusFocusView-macOS-1.0.0.zip` | Apple-Silicon- und Intel-Macs |
-| Windows | `GeniusFocusView-Windows-ARM64-1.0.0.zip` | Ausschließlich Windows 11 auf ARM64-Geräten |
+| macOS | `GeniusFocusView-macOS-1.0.1.zip` | Apple-Silicon- und Intel-Macs |
+| Windows | `GeniusFocusView-Windows-x64-1.0.1.zip` | Windows 10/11 mit Intel- oder AMD-Prozessor |
+| Windows on ARM | `GeniusFocusView-Windows-ARM64-1.0.1.zip` | Windows 11 auf ARM64-Geräten (Snapdragon, Surface Pro X) |
 
-Der aktuelle Windows-Build ist **ausschließlich für ARM64**. Er läuft auf Windows-on-ARM-Geräten, beispielsweise kompatiblen Snapdragon-PCs und ARM64-VMs. Auf gewöhnlichen Windows-PCs mit Intel- oder AMD-Prozessor funktioniert er **nicht**. Ein separater Windows-x64-Build ist derzeit noch nicht verfügbar.
+Nahezu jeder Windows-PC braucht die **x64**-Datei. ARM64 ist nur für die wenigen Windows-Geräte mit Snapdragon- oder anderem ARM-Prozessor gedacht. Im Zweifel: `Windows + Pause` drücken oder **Einstellungen** → **System** → **Info** öffnen und unter **Systemtyp** nachsehen.
+
+Die falsche Windows-Datei führt zur Meldung *„Diese App kann auf dem PC nicht ausgeführt werden"*. Das ist keine Virenwarnung und kein beschädigter Download, sondern bedeutet nur, dass die Datei für einen anderen Prozessor gebaut wurde. Dann einfach die andere herunterladen.
 
 ### Voraussetzungen
 
@@ -113,7 +123,7 @@ Der erste öffentliche Build ist noch nicht von Apple notarisiert. Falls macOS d
 
 ### macOS-Version installieren und öffnen
 
-1. Lade `GeniusFocusView-macOS-1.0.0.zip` unter [GitHub Releases](../../releases/latest) herunter.
+1. Lade `GeniusFocusView-macOS-1.0.1.zip` unter [GitHub Releases](../../releases/latest) herunter.
 2. Öffne die ZIP-Datei per Doppelklick.
 3. Verschiebe `GeniusFokusView.app` bei Bedarf in den Ordner **Programme**.
 4. Beim ersten Start: Klicke die App mit gedrückter Control-Taste oder per Rechtsklick an, wähle **Öffnen** und bestätige nochmals mit **Öffnen**.
@@ -140,15 +150,15 @@ Nur falls macOS dort weiterhin keine Freigabe anbietet, nutze folgende Terminal-
 
 Nutze die Terminal-Alternative ausschließlich für den GFV-Build aus diesem offiziellen Repository. Sie entfernt nur die Download-Quarantäne dieser einen App, installiert keine zusätzliche Software und verändert nicht das restliche System.
 
-### Windows-ARM64-Version installieren und öffnen
+### Windows-Version installieren und öffnen
 
-1. Prüfe zuerst, ob auf dem Gerät **Windows 11 auf ARM64** läuft. Öffne dazu **Einstellungen** → **System** → **Info** und kontrolliere den **Systemtyp**.
-2. Lade `GeniusFocusView-Windows-ARM64-1.0.0.zip` unter [GitHub Releases](../../releases/latest) herunter.
+1. Prüfe zuerst, welchen Prozessor das Gerät hat: `Windows + Pause` drücken oder **Einstellungen** → **System** → **Info** öffnen und den **Systemtyp** ablesen.
+2. Lade `GeniusFocusView-Windows-x64-1.0.1.zip` für Intel- oder AMD-Prozessoren beziehungsweise `GeniusFocusView-Windows-ARM64-1.0.1.zip` für ARM-Geräte unter [GitHub Releases](../../releases/latest) herunter.
 3. Klicke die ZIP-Datei mit der rechten Maustaste an und wähle **Alle extrahieren**.
 4. Lass alle entpackten Dateien zusammen in diesem Ordner. Verschiebe `GeniusFocusView.exe` nicht einzeln, da die danebenliegenden DLL- und `data`-Dateien benötigt werden.
 5. Starte `GeniusFocusView.exe`.
 
-Windows kann eine Sicherheitswarnung anzeigen, weil dieser unabhängige Test-Build derzeit nicht digital signiert ist. Starte nur den Build aus diesem offiziellen Repository. Zeigt der PC einen Intel- oder AMD-Prozessor an, warte bitte auf einen zukünftigen Windows-x64-Build; der ARM64-Download ist mit diesem Gerät nicht kompatibel.
+Windows kann eine Sicherheitswarnung anzeigen, weil dieser unabhängige Test-Build derzeit nicht digital signiert ist: **Weitere Informationen** → **Trotzdem ausführen**. Starte nur Builds aus diesem offiziellen Repository. Meldet Windows eine fehlende `VCRUNTIME140.dll`, installiere das Microsoft Visual C++ Redistributable 2015-2022 (x64).
 
 ## Datenschutz
 
