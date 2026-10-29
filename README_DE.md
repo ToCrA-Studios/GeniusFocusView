@@ -113,6 +113,7 @@ Die Reddit-Version sieht aus wie die Desktop-App und analysiert echte Projekte, 
 
 - Ein Browser darf nicht in den Projektordner schreiben. Exporte kommen als Download, und Entscheidungen wie ausgeschlossene Ordner merkt sich nur dieser Browser für dieses Projekt. Die Desktop-App speichert sie im Projekt.
 - Die Analyse läuft auf einem einzigen Rechenkern und dauert deshalb länger als in der Desktop-App.
+- Ordner lassen sich nicht auf die Seite ziehen; stattdessen per Klick auswählen.
 - Sehr große Projekte können den Speicher eines Browser-Tabs sprengen. Dafür ist die Desktop-App da.
 
 ## Download

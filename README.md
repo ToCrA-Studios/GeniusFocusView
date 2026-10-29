@@ -113,6 +113,7 @@ The Reddit edition looks like the desktop app and analyzes real projects, but br
 
 - A browser may not write into the project folder. Exports arrive as downloads, and decisions such as excluded folders are remembered only by that browser for that project. The desktop app stores them inside the project.
 - The analysis runs on a single CPU core, so everything takes longer than in the desktop app.
+- Folders cannot be dragged onto the page; click to choose the folder instead.
 - Very large projects can exceed the memory of a browser tab. Use the desktop app for those.
 
 ## Download
