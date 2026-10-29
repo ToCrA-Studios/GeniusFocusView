@@ -95,6 +95,26 @@ GFV ist ein unabhängiges Projekt in aktiver Entwicklung. Ich veröffentliche di
 
 Die Erfahrungen und Rückmeldungen aus diesem Release bestimmen, an welchen Problemen ich als Nächstes arbeite und ob GFV nützlich genug ist, um es weiterzuentwickeln.
 
+## Reddit-Version
+
+GFV läuft auch als App in Reddit, direkt im Browser und auf dem Handy, ohne Download. Ihr Zuhause ist [r/GeniusFocusView](https://www.reddit.com/r/GeniusFocusView/), mit einer Anleitung im [GFV-Wiki](https://www.reddit.com/r/GeniusFocusView/wiki/index/). Die App selbst wird gerade für die App-Prüfung durch Reddit vorbereitet. Auch ihr Quellcode ist privat.
+
+Die Reddit-Version sieht aus wie die Desktop-App und analysiert echte Projekte, ist wegen der Browser-Regeln aber eine **Lite-Version**.
+
+**Was sie kann**
+
+- Einen Projektordner laden oder eine ZIP-Datei davon (zum Beispiel über GitHubs **Code > Download ZIP**). Am Handy ist die ZIP-Datei der Weg, ein Projekt zu laden.
+- Dateien, Objekte, Beziehungen, Systeme und Subsysteme erkennen und dieselben Karten, den Explorer und die Details zeigen wie die Desktop-App.
+- Canvas Studio nutzen, am Handy im Vollbild mit Touch-Bedienung: ziehen zum Verschieben, zwei Finger zum Zoomen, ein Element gedrückt halten für seine Aktionen und Eigenschaften.
+- `GeniusFocusView.md` und optional `CompleteCodes.md` exportieren.
+- Ohne externen KI-Dienst analysieren. Das Projekt wird im Browser gelesen und nicht an TocRa Studios geschickt.
+
+**Wo sie eingeschränkt ist**
+
+- Ein Browser darf nicht in den Projektordner schreiben. Exporte kommen als Download, und Entscheidungen wie ausgeschlossene Ordner merkt sich nur dieser Browser für dieses Projekt. Die Desktop-App speichert sie im Projekt.
+- Die Analyse läuft auf einem einzigen Rechenkern und dauert deshalb länger als in der Desktop-App.
+- Sehr große Projekte können den Speicher eines Browser-Tabs sprengen. Dafür ist die Desktop-App da.
+
 ## Download
 
 Die aktuellen Versionen für macOS und Windows findest du unter [GitHub Releases](../../releases/latest).

@@ -95,6 +95,26 @@ GFV is an independent project in active development. I am releasing this communi
 
 The experiences and feedback from this release will determine which problems I work on next and whether GFV is useful enough to continue developing.
 
+## Reddit edition
+
+GFV also runs as an app inside Reddit, directly in the browser and on phones, with no download. Its home is [r/GeniusFocusView](https://www.reddit.com/r/GeniusFocusView/), with a guide in the [GFV wiki](https://www.reddit.com/r/GeniusFocusView/wiki/index/). The app itself is being prepared for Reddit's app review. Its source code is private as well.
+
+The Reddit edition looks like the desktop app and analyzes real projects, but browser rules make it a **lite version**.
+
+**What it can do**
+
+- Load a project folder, or a ZIP archive of it (for example GitHub's **Code > Download ZIP**). On phones, the ZIP archive is the way to load a project.
+- Detect files, objects, relations, systems, and subsystems, and show the same maps, explorer, and details as the desktop app.
+- Use Canvas Studio, on phones in full screen with touch control: drag to move, two fingers to zoom, press and hold an element for its actions and properties.
+- Export `GeniusFocusView.md` and optionally `CompleteCodes.md`.
+- Analyze without an external AI service. The project is read in the browser and is not sent to TocRa Studios.
+
+**Where it is limited**
+
+- A browser may not write into the project folder. Exports arrive as downloads, and decisions such as excluded folders are remembered only by that browser for that project. The desktop app stores them inside the project.
+- The analysis runs on a single CPU core, so everything takes longer than in the desktop app.
+- Very large projects can exceed the memory of a browser tab. Use the desktop app for those.
+
 ## Download
 
 Download the current macOS and Windows builds from [GitHub Releases](../../releases/latest).
